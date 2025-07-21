@@ -12,8 +12,8 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1a4d3a, #2d5a27, #4a7c59, #6b9071);
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #2d5a27, #4a7c59, #6b9071);
             color: white;
             overflow-x: hidden;
         }
@@ -26,22 +26,17 @@
         
         .slide {
             min-height: 100vh;
-            display: none;
+            display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 40px 20px;
             margin-bottom: 20px;
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(15px);
-            border-radius: 25px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
             animation: fadeInUp 0.8s ease-out;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-        
-        .slide.active {
-            display: flex;
         }
         
         @keyframes fadeInUp {
@@ -56,16 +51,14 @@
         }
         
         h1 {
-            font-size: 4rem;
+            font-size: 3.5rem;
             margin-bottom: 30px;
             text-align: center;
-            background: linear-gradient(45deg, #90EE90, #32CD32, #228B22, #00FF7F);
+            background: linear-gradient(45deg, #90EE90, #32CD32, #228B22);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             animation: pulse 2s infinite;
-            font-weight: 700;
-            text-shadow: 0 0 30px rgba(144, 238, 144, 0.3);
         }
         
         @keyframes pulse {
@@ -74,76 +67,46 @@
         }
         
         h2 {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             margin-bottom: 25px;
             text-align: center;
             color: #90EE90;
-            font-weight: 600;
         }
         
         h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
+            font-size: 2rem;
+            margin-bottom: 20px;
             color: #98FB98;
             border-bottom: 2px solid #32CD32;
-            padding-bottom: 8px;
+            padding-bottom: 10px;
         }
         
         .subtitle {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             opacity: 0.9;
-            font-weight: 300;
-        }
-        
-        .hero-image {
-            width: 100%;
-            max-width: 600px;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 20px;
-            margin: 20px 0;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
-        
-        .hero-image:hover {
-            transform: scale(1.02);
         }
         
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
             width: 100%;
-            margin: 30px 0;
+            margin: 20px 0;
         }
         
         .team-member {
-            background: rgba(255, 255, 255, 0.12);
-            padding: 25px;
-            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 15px;
             text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         .team-member:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-            background: rgba(255, 255, 255, 0.18);
-        }
-        
-        .team-member h3 {
-            border: none;
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
-        
-        .team-member p {
-            opacity: 0.8;
-            font-size: 1.1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
         
         .problem-solution {
@@ -155,61 +118,43 @@
         }
         
         .card {
-            background: rgba(255, 255, 255, 0.12);
-            padding: 35px;
-            border-radius: 25px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.15);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #32CD32, #90EE90);
         }
         
         .card:hover {
             transform: scale(1.02);
-            background: rgba(255, 255, 255, 0.18);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.2);
         }
         
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
             width: 100%;
             margin: 30px 0;
         }
         
         .feature {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06));
-            padding: 30px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
             text-align: center;
             transition: all 0.3s ease;
-            position: relative;
         }
         
         .feature:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.12));
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
         }
         
-        .feature-image {
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin: 0 auto 20px;
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
             display: block;
         }
         
@@ -219,223 +164,109 @@
             width: 100%;
             margin: 30px 0;
             flex-wrap: wrap;
-            gap: 20px;
         }
         
         .stat {
             text-align: center;
-            background: rgba(255, 255, 255, 0.12);
-            padding: 25px;
-            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
             margin: 10px;
-            min-width: 180px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .stat:hover {
-            transform: scale(1.05);
-            background: rgba(255, 255, 255, 0.18);
+            min-width: 150px;
         }
         
         .stat-number {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: bold;
             color: #90EE90;
             display: block;
-            margin-bottom: 10px;
-        }
-        
-        .content-image {
-            width: 100%;
-            max-width: 500px;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 15px;
-            margin: 20px 0;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
         
         ul {
             text-align: left;
             font-size: 1.1rem;
             line-height: 1.8;
-            max-width: 100%;
+            max-width: 800px;
         }
         
         li {
-            margin: 12px 0;
-            padding: 12px 15px;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 8px;
-            border-left: 4px solid #32CD32;
-            transition: all 0.3s ease;
-        }
-        
-        li:hover {
-            background: rgba(255, 255, 255, 0.12);
-            transform: translateX(5px);
+            margin: 10px 0;
+            padding-left: 10px;
+            border-left: 3px solid #32CD32;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px;
+            border-radius: 5px;
         }
         
         .cta {
-            background: linear-gradient(45deg, #32CD32, #228B22, #00FF7F);
+            background: linear-gradient(45deg, #32CD32, #228B22);
             color: white;
-            padding: 18px 45px;
+            padding: 15px 40px;
             border: none;
             border-radius: 50px;
-            font-size: 1.3rem;
-            font-weight: 600;
+            font-size: 1.2rem;
             cursor: pointer;
             transition: all 0.3s ease;
-            margin: 25px 0;
+            margin: 20px 0;
             text-transform: uppercase;
             letter-spacing: 1px;
-            box-shadow: 0 8px 25px rgba(50, 205, 50, 0.3);
         }
         
         .cta:hover {
-            transform: scale(1.08);
-            box-shadow: 0 15px 35px rgba(50, 205, 50, 0.5);
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(50, 205, 50, 0.4);
         }
         
-        .nav-arrows {
+        .nav-buttons {
             position: fixed;
-            top: 50%;
-            transform: translateY(-50%);
+            bottom: 20px;
+            right: 20px;
             display: flex;
-            justify-content: space-between;
-            width: 100%;
-            padding: 0 20px;
-            pointer-events: none;
+            gap: 10px;
             z-index: 1000;
         }
         
-        .arrow {
-            background: rgba(50, 205, 50, 0.9);
+        .nav-btn {
+            background: rgba(50, 205, 50, 0.8);
             color: white;
             border: none;
-            padding: 20px;
+            padding: 10px 15px;
             border-radius: 50%;
             cursor: pointer;
             transition: all 0.3s ease;
-            font-size: 1.8rem;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-            pointer-events: auto;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            font-size: 1.2rem;
         }
         
-        .arrow:hover {
+        .nav-btn:hover {
             background: #32CD32;
-            transform: scale(1.15);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-        }
-        
-        .arrow:disabled {
-            background: rgba(100, 100, 100, 0.5);
-            cursor: not-allowed;
-            transform: scale(0.9);
-        }
-        
-        .arrow:disabled:hover {
-            background: rgba(100, 100, 100, 0.5);
-            transform: scale(0.9);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transform: scale(1.1);
         }
         
         .progress-bar {
             position: fixed;
             top: 0;
             left: 0;
-            height: 5px;
-            background: linear-gradient(90deg, #32CD32, #90EE90, #00FF7F);
+            height: 4px;
+            background: linear-gradient(90deg, #32CD32, #90EE90);
             transition: width 0.3s ease;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(50, 205, 50, 0.5);
-        }
-        
-        .slide-counter {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: rgba(50, 205, 50, 0.9);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 20px;
-            font-weight: 600;
-            z-index: 1000;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-        
-        .info-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            align-items: center;
-            margin: 30px 0;
-        }
-        
-        .text-content {
-            padding: 20px;
         }
         
         @media (max-width: 768px) {
-            h1 { font-size: 2.8rem; }
-            h2 { font-size: 2.2rem; }
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
             .problem-solution { grid-template-columns: 1fr; }
-            .info-section { grid-template-columns: 1fr; }
             .stats { flex-direction: column; align-items: center; }
-            .features-grid { grid-template-columns: 1fr; }
-            .nav-arrows { padding: 0 10px; }
-            .arrow { width: 50px; height: 50px; font-size: 1.5rem; padding: 15px; }
-        }
-        
-        .methodology-step {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 25px;
-            border-radius: 15px;
-            margin: 15px 0;
-            border-left: 4px solid #32CD32;
-            transition: all 0.3s ease;
-        }
-        
-        .methodology-step:hover {
-            transform: translateX(10px);
-            background: rgba(255, 255, 255, 0.15);
-        }
-        
-        .quote-highlight {
-            font-style: italic;
-            background: rgba(144, 238, 144, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            border-left: 4px solid #90EE90;
-            margin: 20px 0;
-        }
-        
-        /* Navegación por teclado */
-        body {
-            outline: none;
         }
     </style>
 </head>
 <body>
     <div class="progress-bar" id="progressBar"></div>
-    <div class="slide-counter" id="slideCounter">1 / 8</div>
-    
-    <div class="nav-arrows">
-        <button class="arrow" id="prevArrow" onclick="previousSlide()">‹</button>
-        <button class="arrow" id="nextArrow" onclick="nextSlide()">›</button>
-    </div>
     
     <div class="container">
         <!-- Slide 1: Título -->
-        <div class="slide active" id="slide1">
-            <h1>EarthWay</h1>
-            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Bosque de Guatemala" class="hero-image">
+        <div class="slide" id="slide1">
+            <h1>🌱 EarthWay</h1>
             <p class="subtitle">Conectando voluntarios con la reforestación en Guatemala</p>
             <p class="subtitle">Universidad del Valle de Guatemala - Programación Orientada a Objetos</p>
             <button class="cta" onclick="nextSlide()">Comenzar Presentación</button>
@@ -443,8 +274,7 @@
 
         <!-- Slide 2: Equipo -->
         <div class="slide" id="slide2">
-            <h2>Nuestro Equipo</h2>
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Equipo de trabajo" class="content-image">
+            <h2>👥 Nuestro Equipo</h2>
             <div class="team-grid">
                 <div class="team-member">
                     <h3>Carlos Daniel Altán</h3>
@@ -471,29 +301,26 @@
 
         <!-- Slide 3: Problema y Solución -->
         <div class="slide" id="slide3">
-            <h2>El Desafío</h2>
-            <img src="https://images.unsplash.com/photo-1586348943529-beaae6c28db9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Deforestación" class="content-image">
+            <h2>🎯 El Desafío</h2>
             <div class="problem-solution">
                 <div class="card">
-                    <h3>Problema Identificado</h3>
+                    <h3>❌ Problema</h3>
                     <ul>
-                        <li>Falta de participación en actividades de reforestación</li>
+                        <li>Falta de participación en reforestación</li>
                         <li>Desorganización en eventos ambientales</li>
-                        <li>Dificultad para encontrar información sobre jornadas</li>
-                        <li>Sin visualización del impacto ecológico individual</li>
+                        <li>Dificultad para encontrar información</li>
+                        <li>Sin visualización del impacto ecológico</li>
                         <li>Comunicación limitada entre voluntarios</li>
-                        <li>Falta de motivación por no ver resultados</li>
                     </ul>
                 </div>
                 <div class="card">
-                    <h3>Nuestra Solución</h3>
+                    <h3>✅ Nuestra Solución</h3>
                     <ul>
-                        <li>Plataforma web integrada y accesible</li>
-                        <li>Mapa interactivo de eventos de reforestación</li>
-                        <li>Registro y seguimiento de impacto personal</li>
-                        <li>Comunidad activa de voluntarios comprometidos</li>
-                        <li>Sistema de gamificación con reconocimientos</li>
-                        <li>Interfaz móvil amigable y fácil de usar</li>
+                        <li>Plataforma web integrada</li>
+                        <li>Mapa interactivo de eventos</li>
+                        <li>Registro y seguimiento de impacto</li>
+                        <li>Comunidad activa de voluntarios</li>
+                        <li>Interfaz amigable y accesible</li>
                     </ul>
                 </div>
             </div>
@@ -501,164 +328,194 @@
 
         <!-- Slide 4: Investigación -->
         <div class="slide" id="slide4">
-            <h2>Investigación de Usuario</h2>
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Investigación de usuarios" class="content-image">
+            <h2>🔍 Investigación de Usuario</h2>
             <div class="stats">
                 <div class="stat">
                     <span class="stat-number">6</span>
-                    <p>Entrevistas en profundidad realizadas</p>
+                    <p>Entrevistas realizadas</p>
                 </div>
                 <div class="stat">
                     <span class="stat-number">3</span>
-                    <p>Perfiles de usuario identificados</p>
+                    <p>Perfiles de usuario</p>
                 </div>
                 <div class="stat">
                     <span class="stat-number">100%</span>
-                    <p>Interés en participar en la plataforma</p>
+                    <p>Interés en participar</p>
                 </div>
             </div>
             <div class="features-grid">
                 <div class="feature">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Estudiante ambiental" class="feature-image">
-                    <h3>Perfil 1: Experto Ambiental</h3>
-                    <p>Estudiantes de carreras ambientales con experiencia en reforestación. Necesitan herramientas de organización más efectivas.</p>
-                    <div class="quote-highlight">
-                        "Le gustaría que existieran plataformas de promoción más efectivas y mapas que muestren áreas forestadas"
-                    </div>
+                    <span class="feature-icon">🎓</span>
+                    <h3>Perfil 1</h3>
+                    <p>Estudiantes de carreras ambientales con experiencia en reforestación</p>
                 </div>
                 <div class="feature">
-                    <img src="https://images.unsplash.com/photo-1494790108755-2616c668f7fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Estudiante interesado" class="feature-image">
-                    <h3>Perfil 2: Voluntario Novato</h3>
-                    <p>Estudiantes con interés ambiental pero sin experiencia previa. Buscan información clara y seguridad.</p>
-                    <div class="quote-highlight">
-                        "Le gustaría una app que le informe claramente qué necesita y que le dé seguridad"
-                    </div>
+                    <span class="feature-icon">💚</span>
+                    <h3>Perfil 2</h3>
+                    <p>Estudiantes con interés ambiental pero sin experiencia previa</p>
                 </div>
                 <div class="feature">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Desarrollador" class="feature-image">
-                    <h3>Perfil 3: Tecnólogo Social</h3>
-                    <p>Estudiantes de tecnología enfocados en impacto social. Valoran el diseño y la visualización de resultados.</p>
-                    <div class="quote-highlight">
-                        "Cree que el diseño puede hacer una gran diferencia si logra conectar con las personas y mostrar resultados claros"
-                    </div>
+                    <span class="feature-icon">💻</span>
+                    <h3>Perfil 3</h3>
+                    <p>Estudiantes de tecnología enfocados en impacto social</p>
                 </div>
             </div>
         </div>
 
         <!-- Slide 5: Características Principales -->
         <div class="slide" id="slide5">
-            <h2>Características Principales</h2>
-            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Aplicación móvil" class="content-image">
+            <h2>🚀 Características Principales</h2>
             <div class="features-grid">
                 <div class="feature">
-                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Mapa interactivo" class="feature-image">
+                    <span class="feature-icon">🗺️</span>
                     <h3>Mapa Interactivo</h3>
-                    <p>Visualiza eventos de reforestación y áreas reforestadas en tiempo real con geolocalización precisa</p>
+                    <p>Visualiza eventos y áreas reforestadas en tiempo real</p>
                 </div>
                 <div class="feature">
-                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Calendario" class="feature-image">
+                    <span class="feature-icon">📅</span>
                     <h3>Calendario de Eventos</h3>
-                    <p>Encuentra y únete a jornadas de reforestación con información detallada de logística y transporte</p>
+                    <p>Encuentra y únete a jornadas de reforestación</p>
                 </div>
                 <div class="feature">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Reportes" class="feature-image">
+                    <span class="feature-icon">📊</span>
                     <h3>Reportes de Impacto</h3>
-                    <p>Seguimiento del progreso individual y grupal con estadísticas de árboles plantados y áreas cubiertas</p>
+                    <p>Seguimiento del progreso y visualización de resultados</p>
                 </div>
                 <div class="feature">
-                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Comunidad" class="feature-image">
-                    <h3>Comunidad Activa</h3>
-                    <p>Conéctate con otros voluntarios, comparte experiencias y forma grupos para eventos</p>
+                    <span class="feature-icon">👥</span>
+                    <h3>Comunidad</h3>
+                    <p>Conéctate con otros voluntarios y comparte experiencias</p>
                 </div>
                 <div class="feature">
-                    <img src="https://images.unsplash.com/photo-1567427018141-0584cfcbf1b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Gamificación" class="feature-image">
-                    <h3>Sistema de Gamificación</h3>
-                    <p>Logros, insignias digitales y reconocimientos por participación para mantener la motivación</p>
+                    <span class="feature-icon">🏆</span>
+                    <h3>Gamificación</h3>
+                    <p>Logros, insignias y reconocimientos por participación</p>
                 </div>
                 <div class="feature">
-                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Móvil" class="feature-image">
-                    <h3>Interfaz Móvil Optimizada</h3>
-                    <p>Acceso fácil desde cualquier dispositivo con diseño responsive y navegación intuitiva</p>
+                    <span class="feature-icon">📱</span>
+                    <h3>Interfaz Móvil</h3>
+                    <p>Acceso fácil desde cualquier dispositivo</p>
                 </div>
             </div>
         </div>
 
         <!-- Slide 6: Proceso Design Thinking -->
         <div class="slide" id="slide6">
-            <h2>Metodología Design Thinking</h2>
-            <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Design thinking process" class="content-image">
-            
-            <div class="methodology-step">
-                <h3>1. Empatizar</h3>
-                <p>Realizamos 6 entrevistas en profundidad con usuarios de 3 perfiles diferentes: estudiantes ambientales, voluntarios novatos y tecnólogos sociales.</p>
-            </div>
-            
-            <div class="methodology-step">
-                <h3>2. Definir</h3>
-                <p>Identificamos la necesidad clave: "Conectar a personas interesadas en el medio ambiente con actividades de reforestación de forma amigable y accesible"</p>
-            </div>
-            
-            <div class="methodology-step">
-                <h3>3. Idear</h3>
-                <p>Generamos múltiples soluciones mediante lluvia de ideas, seleccionando una plataforma web con mapa interactivo y comunidad integrada.</p>
-            </div>
-            
-            <div class="methodology-step">
-                <h3>4. Prototipar</h3>
-                <p>Desarrollamos 3 versiones iterativas de prototipos, mejorando basándose en retroalimentación continua de usuarios.</p>
-            </div>
-            
-            <div class="methodology-step">
-                <h3>5. Testear</h3>
-                <p>Validamos cada prototipo con usuarios reales, realizando retrospectivas para identificar mejoras y confirmar la viabilidad.</p>
+            <h2>🎨 Proceso Design Thinking</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <span class="feature-icon">🎯</span>
+                    <h3>1. Empatizar</h3>
+                    <p>Entrevistas con usuarios de 3 perfiles diferentes</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">📋</span>
+                    <h3>2. Definir</h3>
+                    <p>Identificación de necesidades y problemas clave</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">💡</span>
+                    <h3>3. Idear</h3>
+                    <p>Lluvia de ideas y selección de la mejor solución</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🔧</span>
+                    <h3>4. Prototipar</h3>
+                    <p>3 versiones de prototipos con mejoras iterativas</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✅</span>
+                    <h3>5. Testear</h3>
+                    <p>Validación con usuarios y retrospectivas</p>
+                </div>
             </div>
         </div>
 
         <!-- Slide 7: Próximos Pasos -->
         <div class="slide" id="slide7">
-            <h2>Roadmap de Desarrollo</h2>
-            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Desarrollo de software" class="content-image">
-            <div class="info-section">
-                <div class="text-content">
-                    <div class="card">
-                        <h3>Fase 1: Desarrollo Backend</h3>
-                        <ul>
-                            <li>Base de datos relacional para usuarios y eventos</li>
-                            <li>API REST para comunicación frontend-backend</li>
-                            <li>Sistema de autenticación y autorización</li>
-                            <li>Integración con APIs de geolocalización</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="text-content">
-                    <div class="card">
-                        <h3>Fase 2: Aplicación Web</h3>
-                        <ul>
-                            <li>Interfaz responsive con React o similar</li>
-                            <li>Implementación de mapas con Leaflet/Google Maps</li>
-                            <li>Sistema de notificaciones push</li>
-                            <li>Panel administrativo para organizaciones</li>
-                        </ul>
-                    </div>
-                </div>
+            <h2>🔮 Próximos Pasos</h2>
+            <div class="card">
+                <h3>Desarrollo Técnico</h3>
+                <ul>
+                    <li>Implementación del backend con base de datos</li>
+                    <li>Desarrollo de la aplicación web responsive</li>
+                    <li>Integración con APIs de mapas (Google Maps/Leaflet)</li>
+                    <li>Sistema de notificaciones y comunicaciones</li>
+                    <li>Panel administrativo para organizaciones</li>
+                    <li>Testing y optimización de rendimiento</li>
+                    <li>Despliegue y lanzamiento piloto</li>
+                </ul>
             </div>
-            <div class="stats">
-                <div class="stat">
-                    <span class="stat-number">12</span>
-                    <p>Semanas de desarrollo estimadas</p>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">5</span>
-                    <p>Desarrolladores en el equipo</p>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">100+</span>
-                    <p>Usuarios beta esperados</p>
-                </div>
-            </div>
-            <button class="cta" onclick="window.location.href='mailto:alt25772@uvg.edu.gt?subject=Quiero%20apoyar%20EarthWay'">Contactar al Equipo</button>
+            <button class="cta" onclick="window.location.href='mailto:alt25772@uvg.edu.gt?subject=Quiero%20apoyar'">Contactar al Equipo</button>
         </div>
 
-        <!-- Slide 8: Impacto Esperado -->
+        <!-- Slide 8: Gracias -->
         <div class="slide" id="slide8">
-            <h2>
+            <h1>¡Gracias!</h1>
+            <p class="subtitle">🌳 Juntos podemos hacer la diferencia 🌳</p>
+            <p class="subtitle">EarthWay - Conectando corazones verdes</p>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">🌱</span>
+                    <p>Cada árbol cuenta</p>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">🤝</span>
+                    <p>Comunidad unida</p>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">🌍</span>
+                    <p>Futuro sostenible</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-buttons">
+        <button class="nav-btn" onclick="prevSlide()">‹</button>
+        <button class="nav-btn" onclick="nextSlide()">›</button>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 8;
+
+        function updateProgressBar() {
+            const progress = (currentSlide / totalSlides) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            if (n > totalSlides) currentSlide = 1;
+            if (n < 1) currentSlide = totalSlides;
+            
+            slides.forEach(slide => slide.style.display = 'none');
+            document.getElementById('slide' + currentSlide).style.display = 'flex';
+            updateProgressBar();
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide--;
+            showSlide(currentSlide);
+        }
+
+        // Navegación con teclado
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+
+        // Inicializar
+        showSlide(currentSlide);
+
+        // Auto-advance (opcional)
+        // setInterval(nextSlide, 10000); // Cambia cada 10 segundos
+    </script>
+</body>
+</html>
